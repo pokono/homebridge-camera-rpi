@@ -52,6 +52,10 @@ function Camera (hap, conf) {
       ]
     }
   }
+  if (this.conf.highResolution || false) {
+    options.video.resolutions.push([1280, 960, 30])
+    options.video.resolutions.push([1920, 1080, 30])
+  }
   this._v4l2CTLSetCTRL('rotate', this.conf.rotate || 0)
   this._v4l2CTLSetCTRL('vertical_flip', this.conf.verticalFlip ? 1 : 0)
   this._v4l2CTLSetCTRL('horizontal_flip', this.conf.horizontalFlip ? 1 : 0)

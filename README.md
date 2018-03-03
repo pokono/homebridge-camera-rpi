@@ -102,8 +102,11 @@ sudo systemctl start hap-camera-rpi
   "id": "Pi Camera",
   "rotate": 0,
   "verticalFlip": false,
-  "horizontalFlip": false
+  "horizontalFlip": false,
+  "highResolution": false
 }
 ```
 
-Note: `rotate` currently only works for `0` and `180` degrees.
+Note:
+- `rotate` currently only works for `0` and `180` degrees.
+- `highResolution` enables 1080p streaming.
